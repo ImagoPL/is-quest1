@@ -1,0 +1,71 @@
+
+body {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.playground {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+#canvas {
+    border: 2px solid #555;
+    position: relative;
+    z-index: 15;
+}
+#dots {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 502px;
+    z-index: 12;
+    background-color: #eee;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #ddd;
+    overflow-y: auto;
+}
+#dots li {
+    display: block;
+    padding: 12px 15px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    z-index: 1;
+    position: relative;
+}
+
+#dots li button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+}
+
+#dots li button.delete {
+    right: 15px;
+    color: #dd0000;
+}
+
+#dots li button.randcolor {
+    right: 55px;
+    color: #555;
+}
+
+#dots li:hover {
+    background-color: #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    z-index: 1000;
+}
+
+.pop {
+    transform: scale(2);
+}
